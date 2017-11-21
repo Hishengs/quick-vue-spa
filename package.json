@@ -1,14 +1,22 @@
 {
   "name": "quick-vue-spa",
-  "version": "1.0.0",
-  "description": "Quickly create a classic Vue SPA project",
-  "main": "index.js",
+  "version": "1.0.4",
+  "description": "Quickly create a typical Vue SPA project",
+  "main": "./lib/index.js",
+  "bin": {
+    "quick-vue-spa": "./lib/init"
+  },
   "scripts": {
     "test": "node test/index.js"
   },
-  "author": "Hisheng",
+  "author": {
+    "name": "Hisheng",
+    "email": "hishengs@gmail.com",
+    "url": "http://hisheng.net"
+  },
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.11.0",
     "inquirer": "^4.0.0"
   }
 }

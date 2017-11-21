@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+const commander = require('commander');
+const Creator = require('./index.js');
+const path = require('path');
+const fs = require('fs');
+const packageJson = require('../package.json');
+
+commander
+.version(packageJson.version)
+.command('init <projectName>')
+.action(function (projectName) {
+	if(fs.existsSync(path.join(process.cwd(), projectName))){
+    console.log('project folder exists, please remove it first.');
+  }else {
+  	console.log('>>> start init project: %s.\n', projectName);
+	  const creator = new Creator({
+	  	projectName,
+	  });
+	  creator.start();
+  }
+});
+
+commander.parse(process.argv);
