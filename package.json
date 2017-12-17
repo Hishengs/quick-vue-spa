@@ -1,6 +1,6 @@
 {
   "name": "quick-vue-spa",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Quickly create a typical Vue SPA project",
   "main": "./lib/index.js",
   "bin": {
